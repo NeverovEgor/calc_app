@@ -41,3 +41,25 @@ class Calculator:
     # Rounding functions
     def floor(self, number):
         return math.floor(number)
+
+    def ceil(self, number):
+        return math.ceil(number)
+
+    # Memory functions
+    def memory_add(self, value):
+        self.memory += value
+
+    def memory_clear(self):
+        self.memory = 0
+
+    def memory_recall(self):
+        return self.memory
+
+# Example usage
+if __name__ == "__main__":
+    calc = Calculator()
+    print("Addition: ", calc.add(5, 3))
+    print("Sin(30): ", calc.sine(30))
+    calc.memory_add(100)
+    print("Memory Recall: ", calc.memory_recall())
+
